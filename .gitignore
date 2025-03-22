@@ -151,7 +151,6 @@ apple.log
 e.log
 samsung.log
 checkpoint/
-figs/
 tb_logger/
 experiments/
 Enhancement/res/
