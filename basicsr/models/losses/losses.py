@@ -182,12 +182,12 @@ class multi_VGGPerceptualLoss(torch.nn.Module):
             # # loss_dict['COS_loss'] = COS_loss1 + COS_loss2 + COS_loss3
             # loss_dict['per_loss'] = per_loss1
             # loss_dict['msssim'] = msssim_loss1
-            loss_dict['loss'] = loss1 + loss2 + loss3
-            loss_dict['l1_loss'] = l1_loss1 + l1_loss2 + l1_loss3
-            loss_dict['per_loss'] = per_loss1 + per_loss2 + per_loss3
+            loss_dict['loss'] = loss1
+            loss_dict['l1_loss'] = l1_loss1
+            loss_dict['per_loss'] = per_loss1
             # loss_dict['msssim'] = msssim_loss1 + msssim_loss2 + msssim_loss3
 
-        return loss1 + loss2 + loss3, loss_dict
+        return loss1, loss_dict
 
 
 class VGGPerceptualLoss(torch.nn.Module):

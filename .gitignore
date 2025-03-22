@@ -154,7 +154,6 @@ checkpoint/
 tb_logger/
 experiments/
 Enhancement/res/
-README.md
 Enhancement/Options/new_sysu_igb.yml
 Enhancement/Options/god.yml
 # PyCharm

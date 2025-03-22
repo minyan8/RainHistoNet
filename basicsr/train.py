@@ -27,7 +27,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] ='0'
 def parse_options(is_train=True):
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-opt', type=str,default='/home/min/Documents/ntire25/raindrop/SYSU-FVL-T2/Enhancement/Options/god.yml', help='Path to option YAML file.')
+        '-opt', type=str,default='Enhancement/Options/rainHistoNet.yml', help='Path to option YAML file.')
         # '-opt', type=str,default='./Enhancement/Options/Enhancement_MIRNet_v2_Haze.yml', help='Path to option YAML file.')
         # '-opt', type=str,default='./Enhancement/Options/Enhancement_MIRNet_v2_Lol.yml', help='Path to option YAML file.')
     parser.add_argument(
