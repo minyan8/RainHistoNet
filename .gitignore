@@ -155,6 +155,9 @@ figs/
 tb_logger/
 experiments/
 Enhancement/res/
+README.md
+Enhancement/Options/new_sysu_igb.yml
+Enhancement/Options/god.yml
 # PyCharm
 #  JetBrains specific template is maintainted in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore

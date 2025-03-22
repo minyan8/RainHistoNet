@@ -1,0 +1,1 @@
+python test.py --weights /home/min/Documents/ntire25/raindrop/SYSU-FVL-T2/experiments/sysu_hist_bot_fine_tune2_without_blur/models/net_g_5000.pth --input_dir /home/min/Documents/ntire25/raindrop/data/RainDrop --result_dir ../sysu_hist_res_fine
