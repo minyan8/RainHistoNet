@@ -23,15 +23,15 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 parser = argparse.ArgumentParser(description='Image Enhancement using MIRNet-v2')
 
 parser.add_argument('--input_dir', default='/home/min/Documents/ntire25/raindrop/data/RainDrop', type=str, help='Directory of validation images')
-parser.add_argument('--result_dir', default='./cnmm/', type=str, help='Directory for results')
+parser.add_argument('--result_dir', default='../results', type=str, help='Directory for results')
 parser.add_argument('--weights', default='/home/min/Documents/ntire25/raindrop/SYSU-FVL-T2/experiments/sysu_hist_rain/models/net_g_5000.pth', type=str, help='Path to weights')
-parser.add_argument('--dataset', default='NtireLL', type=str, help='Test Dataset')
+parser.add_argument('--dataset', default='Raindrop', type=str, help='Test Dataset')
 
 args = parser.parse_args()
 
 
 ####### Load yaml #######
-yaml_file = '/home/min/Documents/ntire25/raindrop/SYSU-FVL-T2/Enhancement/Options/Ntire24UHDLowLight.yml'
+yaml_file = 'Options/rainHistoNet.yml'
 weights = args.weights
 
 import yaml
@@ -81,13 +81,13 @@ model_restoration.cuda()
 model_restoration = nn.DataParallel(model_restoration)
 model_restoration.eval()
 
-# code for profiling
-from thop import profile
-dummy_input = torch.randn(1, 3, 720, 480).cuda()
-model_for_profile = model_restoration.module if isinstance(model_restoration, torch.nn.DataParallel) else model_restoration
-flops, params = profile(model_for_profile, inputs=(dummy_input,))
-# Convert to GFLOPs
-print(f"GFLOPs: {flops / 1e9:.2f}, Parameters: {params / 1e6:.2f}M")
+# # code for profiling
+# from thop import profile
+# dummy_input = torch.randn(1, 3, 720, 480).cuda()
+# model_for_profile = model_restoration.module if isinstance(model_restoration, torch.nn.DataParallel) else model_restoration
+# flops, params = profile(model_for_profile, inputs=(dummy_input,))
+# # Convert to GFLOPs
+# print(f"GFLOPs: {flops / 1e9:.2f}, Parameters: {params / 1e6:.2f}M")
 
 factor = 16
 dataset = args.dataset

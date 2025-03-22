@@ -43,7 +43,7 @@ pip install numpy==1.26.4
 python setup.py develop --no_cuda_ext
 ```
 
-### Train
+## Train
 
 Set the dataset root in the configuration file located at `./Enhancement/Options/rainHistoNet.yml`, and then run the script below.
 
@@ -51,7 +51,7 @@ Set the dataset root in the configuration file located at `./Enhancement/Options
 python basicsr/train.py
 ```
 
-### Test
+## Test
 
 To test on your own data, you can run:
 
