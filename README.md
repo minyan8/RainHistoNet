@@ -60,7 +60,7 @@ cd Enhancement
 python test.py --weights [your pretrained model weights] --input_dir [your input data path] --result_dir [your result saved path] --dataset [your dataset name]
 ```
 
-We have provided our pre-trained model for this challenge [**here**](https://drive.google.com/drive/folders/19p8rnUJPwKt7nY1sAZFTfFkpbZW6dROo?usp=sharing).  Additionally, the final results can be downloaded from here. [**here**](https://drive.google.com/drive/folders/19p8rnUJPwKt7nY1sAZFTfFkpbZW6dROo?usp=sharing)
+We have provided our pre-trained model for this challenge [**here**](https://drive.google.com/drive/folders/19p8rnUJPwKt7nY1sAZFTfFkpbZW6dROo?usp=sharing).  Additionally, the final results can be downloaded from [**here**](https://drive.google.com/drive/folders/19p8rnUJPwKt7nY1sAZFTfFkpbZW6dROo?usp=sharing).
 
 ## Acknowledgments
 
