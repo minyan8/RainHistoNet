@@ -156,6 +156,7 @@ experiments/
 Enhancement/res/
 Enhancement/Options/new_sysu_igb.yml
 Enhancement/Options/god.yml
+bless.py
 # PyCharm
 #  JetBrains specific template is maintainted in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore

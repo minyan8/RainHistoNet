@@ -1,5 +1,7 @@
 # **RainHistoNet**: Single-Image Day and Night Raindrop Removal via Histogram-Guided Restoration
 
+This repo is our solution for [NTIRE 2025 The First Challenge on Day and Night Raindrop Removal for Dual-Focused Images](https://codalab.lisn.upsaclay.fr/competitions/21636#learn_the_details).
+
 ## Description
 
 As shown in the figure, our model is based on [**ESDNet**](https://github.com/CVMI-Lab/UHDM). The backbone primarily consists of an encoder-decoder network. At each encoder and decoder level, a Semantic-Aligned Scale-Aware Module (SAM) is incorporated to address scale variations. Additionally, we introduce a Histogram Transformer Block from [**Histoformer**](https://github.com/CVMI-Lab/UHDM), which employs histogram self-attention with dynamic range spatial attention. This block is placed between the encoder and decoder to achieve global and efficient degradation removal.
@@ -8,8 +10,6 @@ As shown in the figure, our model is based on [**ESDNet**](https://github.com/CV
 
 ## Installation
 
-You can follow the step of MIRNet-v2 in [here](https://github.com/swz30/MIRNetv2/blob/main/INSTALL.md#installation) or based on follows:
-
 1. Clone our repository
 
 ```
@@ -17,7 +17,7 @@ git clone https://github.com/minyan8/RainHistoNet.git
 cd RainHistoNet
 ```
 
-2. Make the conda environment
+2. Create the conda environment
 
 ```
 conda create -n rain python=3.9
@@ -60,14 +60,7 @@ cd Enhancement
 python test.py --weights [your pretrained model weights] --input_dir [your input data path] --result_dir [your result saved path] --dataset [your dataset name]
 ```
 
-We have placed our pre-trained model for this challenge in `Enhancement/pretrained_models/net_g_150000.pth`. **If you just want to run the challenge official input data, you can run** 
-
-```
-cd Enhancement
-python test.py --input_dir [your input data path]
-```
-
-the results will be saved in `Enhancement/results/NtireLL`, also, the final result can be downloaded [here](https://drive.google.com/file/d/1RE_DMzGqqX9bOusmIpKGEj7h_4UF3kWE/view?usp=sharing)
+We have provided our pre-trained model for this challenge [**here**](https://drive.google.com/drive/folders/19p8rnUJPwKt7nY1sAZFTfFkpbZW6dROo?usp=sharing).  Additionally, the final results can be downloaded from here. [**here**](https://drive.google.com/drive/folders/19p8rnUJPwKt7nY1sAZFTfFkpbZW6dROo?usp=sharing)
 
 ## Acknowledgments
 
